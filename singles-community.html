@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Singles Community - MIMI</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Extra styles just for this page to make it look like your screenshot */
+    .checkout-container { padding: 20px; }
+    .page-title { font-size: 2.2rem; margin-bottom: 10px; }
+    .page-price { font-size: 1.5rem; margin-bottom: 20px; }
+    .divider { border-bottom: 1px solid #aaa; margin: 20px 0; }
+    .rules-text { font-family: Arial, sans-serif; font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px; }
+    
+    /* Form Styling */
+    .form-header { font-size: 1.4rem; text-align: center; margin: 30px 0 20px 0; line-height: 1.2; }
+    .form-group { margin-bottom: 15px; display: flex; flex-direction: column; }
+    .form-group label { font-family: Arial, sans-serif; font-size: 0.9rem; font-weight: bold; margin-bottom: 5px; }
+    .form-control { 
+      width: 100%; 
+      padding: 12px; 
+      border: 1px solid #aaa; 
+      background: #fff; 
+      font-size: 1rem; 
+      font-family: Arial, sans-serif;
+    }
+    .phone-group { display: flex; gap: 10px; }
+    .country-select { width: 35%; }
+    
+    /* Checkout Totals */
+    .totals { font-family: Arial, sans-serif; margin-top: 20px; font-size: 1rem; }
+    .totals-row { display: flex; justify-content: space-between; margin-bottom: 10px; }
+    .totals-final { font-weight: bold; font-size: 1.2rem; border-top: 1px dashed #aaa; padding-top: 10px; margin-top: 10px; }
+    
+    /* Buttons */
+    .submit-btn { 
+      width: 100%; 
+      padding: 15px; 
+      background: #000; 
+      color: #fff; 
+      border: none; 
+      font-size: 1.1rem; 
+      font-family: Georgia, serif;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .telegram-channel-btn {
+      display: block;
+      text-align: center;
+      width: 100%;
+      padding: 15px;
+      background: #0088cc; /* Telegram Blue */
+      color: #fff;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      margin-top: 30px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Note: Make sure you upload a new top image named 'group-banner.jpg' -->
+    <img src="group-banner.jpg" alt="Mimi's Group" class="hero-image" style="border-radius: 0;">
+
+    <div class="checkout-container">
+      <h1 class="page-title">Singles Community</h1>
+      <p class="page-price">€15</p>
+      
+      <div class="divider"></div>
+
+      <p class="rules-text"><strong>mimisonlinedating</strong></p>
+      <p class="rules-text">This community is for singles who are serious about finding genuine love and building a meaningful relationship.</p>
+      <p class="rules-text">When you join, please create a clear dating profile and go straight to the point about why you are here. State your age, location, a little about yourself, and most importantly, <strong>the kind of partner and relationship you are looking for.</strong></p>
+      <p class="rules-text">Please do not use your profile mainly for prayers, quotes, or general messages. This is a dating community, so your profile should help other members understand who you are and what you are genuinely searching for.</p>
+
+      <div class="divider"></div>
+
+      <h2 class="form-header">JOIN GROUP FOR SINGLES READY<br>FOR MARRIAGE 2026</h2>
+
+      <!-- THE FORM -->
+      <form id="joinForm">
+        <div class="form-group">
+          <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+        </div>
+        
+        <div class="form-group">
+          <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label>Phone Number</label>
+          <div class="phone-group">
+            <select id="countryCode" class="form-control country-select">
+              <option value="+254">KE +254</option>
+              <option value="+1">US +1</option>
+              <option value="+44">UK +44</option>
+              <option value="+234">NG +234</option>
+              <option value="+27">ZA +27</option>
+              <option value="+256">UG +256</option>
+              <option value="+255">TZ +255</option>
+              <option value="+233">GH +233</option>
+            </select>
+            <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Location (City, Country)</label>
+          <input type="text" id="location" class="form-control" placeholder="e.g. Nairobi, Kenya" required>
+        </div>
+
+        <div class="form-group">
+          <label>Your Age</label>
+          <input type="number" id="age" class="form-control" placeholder="Enter your age" required>
+        </div>
+
+        <div class="form-group">
+          <label>Gender</label>
+          <select id="gender" class="form-control" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Partner Age Preference</label>
+          <input type="text" id="partnerAge" class="form-control" placeholder="e.g. (25 - 30)" required>
+        </div>
+
+        <div class="form-group" style="flex-direction: row; align-items: center; gap: 10px;">
+          <input type="checkbox" id="marketing" style="width: 20px; height: 20px;">
+          <label for="marketing" style="margin: 0; font-weight: normal;">I agree to receive marketing emails.</label>
+        </div>
+
+        <!-- TOTALS -->
+        <div class="totals">
+          <div class="totals-row">
+            <span>Subtotal :</span>
+            <span>€15.00</span>
+          </div>
+          <div class="totals-row">
+            <span>Tax :</span>
+            <span>€0.00</span>
+          </div>
+          <div class="totals-row totals-final">
+            <span>Total :</span>
+            <span>€15.00</span>
+          </div>
+        </div>
+
+        <!-- SUBMIT BUTTON (Triggers Telegram DM) -->
+        <button type="submit" class="submit-btn">SEND DETAILS TO TELEGRAM</button>
+      </form>
+
+      <div class="divider" style="margin: 40px 0; border-top: 1px dashed #aaa; border-bottom: none;"></div>
+
+      <!-- TELEGRAM CHANNEL BUTTON -->
+      <a href="https://t.me/speeddatingwithmim" target="_blank" class="telegram-channel-btn">
+        JOIN TELEGRAM CHANNEL
+      </a>
+      <p style="text-align: center; font-family: Arial; font-size: 0.8rem; margin-top: 15px; color: #555;">
+        Click above to join the channel. If you haven't submitted your details, please fill the form and click "Send Details" first.
+      </p>
+
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT TO SEND MESSAGE TO TELEGRAM -->
+  <script>
+    document.getElementById('joinForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Stops the page from reloading
+
+      // Get the values from the form
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var code = document.getElementById('countryCode').value;
+      var phone = document.getElementById('phone').value;
+      var location = document.getElementById('location').value;
+      var age = document.getElementById('age').value;
+      var gender = document.getElementById('gender').value;
+      var partnerAge = document.getElementById('partnerAge').value;
+
+      // Create the custom message
+      var message = "Hello Mimi! I am ready to join the community. I have selected the €15 option.\n\n";
+      message += "Name: " + name + "\n";
+      message += "Email: " + email + "\n";
+      message += "Phone: " + code + " " + phone + "\n";
+      message += "Location: " + location + "\n";
+      message += "Age: " + age + "\n";
+      message += "Gender: " + gender + "\n";
+      message += "Partner Preference (Age): " + partnerAge;
+
+      // Encode the message so it works in a URL
+      var encodedMessage = encodeURIComponent(message);
+
+      // Your Telegram Inbox Link
+      var telegramUsername = "speeddatingwithmimi"; 
+      var telegramUrl = "https://t.me/" + telegramUsername + "?text=" + encodedMessage;
+
+      // Open Telegram
+      window.open(telegramUrl, '_blank');
+    });
+  </script>
+
+</body>
+</html>
