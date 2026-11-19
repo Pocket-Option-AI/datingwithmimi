@@ -57,28 +57,27 @@ h1 {
   line-height: 1.4;
 }
 
-/* THE CARDS */
+/* CARDS */
 .card {
   background: #f3eff8; 
   margin: 0 15px 25px 15px;
   padding: 15px;
   display: flex;
-  flex-direction: row; /* Forces side-by-side always */
+  flex-direction: row; 
   gap: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   align-items: stretch;
 }
 
-/* Exactly forcing the right images to the right side */
-.card:nth-child(3), /* Card 2 (Private Matchmaking) */
-.card:nth-child(5)  /* Card 4 (WhatsApp) */ {
+/* Force alternate layout based on the HTML order */
+.card:nth-child(even) {
   flex-direction: row-reverse;
 }
 
 .card img {
   width: 45%;
   object-fit: cover;
-  image-rendering: -webkit-optimize-contrast; /* Makes images HD */
+  image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
 
@@ -86,7 +85,7 @@ h1 {
   width: 55%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Pushes the button to the absolute bottom */
+  justify-content: space-between; 
 }
 
 .text-group {
