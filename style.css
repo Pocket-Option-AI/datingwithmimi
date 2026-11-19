@@ -57,7 +57,7 @@ h1 {
   line-height: 1.4;
 }
 
-/* THE CARDS */
+/* THE CARDS - Side by side always */
 .card {
   background: #f3eff8; 
   margin: 0 15px 25px 15px;
@@ -69,15 +69,16 @@ h1 {
   align-items: stretch;
 }
 
-/* Alternating layout for cards 2 and 4 */
-.card:nth-child(even) {
+/* FORCE EXACT IMAGE PLACEMENT TO MATCH YOUR SCREENSHOTS */
+/* Card 2 and Card 4 have image on the RIGHT */
+.card:nth-child(3), 
+.card:nth-child(5) {
   flex-direction: row-reverse;
 }
 
 .card img {
   width: 45%;
   object-fit: cover;
-  border-radius: 2px;
 }
 
 .card-content {
@@ -94,14 +95,14 @@ h1 {
 }
 
 .card h2 {
-  font-size: 1.15rem; /* Slightly smaller to fit mobile */
+  font-size: 1.15rem;
   font-weight: normal;
   line-height: 1.2;
 }
 
 .card p {
   font-family: Arial, sans-serif;
-  font-size: 0.85rem; /* Slightly smaller to fit mobile */
+  font-size: 0.85rem;
   line-height: 1.3;
   color: #222;
 }
@@ -120,7 +121,6 @@ h1 {
   margin-left: 5px;
 }
 
-/* BUTTONS */
 .btn {
   display: flex;
   justify-content: space-between; 
@@ -159,5 +159,3 @@ h1 {
 .footer-divider {
   color: #333;
 }
-
-/* Notice there is NO media query at the bottom anymore! This stops it from stacking on mobile. */
