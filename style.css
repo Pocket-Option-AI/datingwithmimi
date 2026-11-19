@@ -57,35 +57,36 @@ h1 {
   line-height: 1.4;
 }
 
-/* THE CARDS - Side by side always */
+/* THE CARDS */
 .card {
   background: #f3eff8; 
   margin: 0 15px 25px 15px;
   padding: 15px;
   display: flex;
-  flex-direction: row; /* Forces side-by-side */
+  flex-direction: row; /* Forces side-by-side always */
   gap: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   align-items: stretch;
 }
 
-/* FORCE EXACT IMAGE PLACEMENT TO MATCH YOUR SCREENSHOTS */
-/* Card 2 and Card 4 have image on the RIGHT */
-.card:nth-child(3), 
-.card:nth-child(5) {
+/* Exactly forcing the right images to the right side */
+.card:nth-child(3), /* Card 2 (Private Matchmaking) */
+.card:nth-child(5)  /* Card 4 (WhatsApp) */ {
   flex-direction: row-reverse;
 }
 
 .card img {
   width: 45%;
   object-fit: cover;
+  image-rendering: -webkit-optimize-contrast; /* Makes images HD */
+  image-rendering: crisp-edges;
 }
 
 .card-content {
   width: 55%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between; /* Pushes the button to the absolute bottom */
 }
 
 .text-group {
