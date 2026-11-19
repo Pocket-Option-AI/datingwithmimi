@@ -63,32 +63,18 @@ h1 {
   margin: 0 15px 25px 15px;
   padding: 15px;
   display: flex;
-  flex-direction: row; /* Forces side-by-side always */
   gap: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   align-items: stretch;
 }
 
-/* LOCK THE EXACT IMAGE PLACEMENT */
-/* Card 1 (Singles) - Image Left */
-.card:nth-child(3) {
-  flex-direction: row; 
+/* EXACT IMAGE PLACEMENT RULES */
+.card-img-left {
+  flex-direction: row; /* Image Left, Text Right */
 }
-/* Card 2 (Matchmaking) - Image Right */
-.card:nth-child(4) {
-  flex-direction: row-reverse; 
-}
-/* Card 3 (Black Image) - Image Left */
-.card:nth-child(5) {
-  flex-direction: row; 
-}
-/* Card 4 (WhatsApp) - Image Right */
-.card:nth-child(6) {
-  flex-direction: row-reverse; 
-}
-/* Card 5 (YouTube) - Image Left */
-.card:nth-child(7) {
-  flex-direction: row; 
+
+.card-img-right {
+  flex-direction: row-reverse; /* Text Left, Image Right */
 }
 
 .card img {
